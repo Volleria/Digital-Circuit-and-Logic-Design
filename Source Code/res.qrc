@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>be.png</file>
+        <file>bejing.jpg</file>
+        <file>boo.png</file>
+        <file>close.png</file>
+        <file>hua.png</file>
+        <file>jian.png</file>
+        <file>kaishi.png</file>
+        <file>qingchu.png</file>
+        <file>1222.png</file>
+        <file>22222.png</file>
+        <file>Eeee.png</file>
+        <file>kk.jpg</file>
+        <file>TRI.png</file>
+        <file>ss (2).jpg</file>
+        <file>ss (1).jpg</file>
+        <file>ss (2).png</file>
+        <file>qqq.ico</file>
+    </qresource>
+</RCC>

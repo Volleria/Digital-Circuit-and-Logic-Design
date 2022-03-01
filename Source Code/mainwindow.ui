@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget{
+	border-image: url(:/TRI.png);
+	
+}
+</string>
+   </property>
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Microsoft YaHei UI&quot;;
+color: rgb(252, 252, 252);
+font: 16pt &quot;Microsoft YaHei UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>状态数：</string>
+    </property>
+   </widget>
+   <widget class="MySlider" name="NPS_Slider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>41</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>11</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>11</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>12</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;Microsoft YaHei UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>输入X的数量：</string>
+    </property>
+   </widget>
+   <widget class="MySlider2" name="NX_Slider">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>711</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>2</number>
+    </property>
+    <property name="maximum">
+     <number>16</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn1">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>90</y>
+      <width>141</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-image: url(:/kaishi.png);
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(150,150,150,230),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(150,150,150,230));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:pressed{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(100,100,100,255),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(100,100,100,255));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+padding-left:2px;
+padding-top:1px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>791</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI</family>
+      <pointsize>14</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane{
+	border:none;
+}
+QTabWidget::tab-bar{
+        alignment:left;
+}
+QTabBar::tab{
+	background:transparent;
+	color:white;
+	min-width:30ex;
+	min-height:10ex;
+}
+QTabBar::tab:hover{
+	background:rgb(255, 255, 255, 100);
+}
+QTabBar::tab:selected{
+	border-color: white;
+	background:white;
+	color:green;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string notr="true">待化简</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>791</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(17, 96, 109);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="rowCount">
+       <number>2</number>
+      </property>
+      <property name="columnCount">
+       <number>1</number>
+      </property>
+      <row/>
+      <row/>
+      <column/>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/kk.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>已化简</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>791</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn2">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>260</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-image: url(:/22222.png);
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(150,150,150,230),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(150,150,150,230));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:pressed{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(100,100,100,255),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(100,100,100,255));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+padding-left:2px;
+padding-top:1px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/jian.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>130</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/jian.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>495</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/hua.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>20</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/hua.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn3">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>430</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-image: url(:/close.png);
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(150,150,150,230),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(150,150,150,230));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:pressed{
+background-color:
+qlineargradient(spread:pad,x1:0,x2:0, y1:0, y2:1,
+stop: 0 rgba(100,100,100,255),
+stop: 0.495 rgba(220 ,220, 220,200),
+stop: 0.505 rgba(220, 220, 220,200),
+stop: 1 rgba(100,100,100,255));
+
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+font: 75 12pt &quot;微软雅黑&quot;;
+padding-left:2px;
+padding-top:1px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>620</y>
+      <width>841</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Copyright © 2020 by Cooook &amp; Ekko. All rights reserved.</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MySlider</class>
+   <extends>QSlider</extends>
+   <header location="global">myslider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MySlider2</class>
+   <extends>QSlider</extends>
+   <header location="global">myslider2.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
